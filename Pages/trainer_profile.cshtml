@@ -1,0 +1,174 @@
+﻿@page
+@model TrainDEv.Pages.trainer_profileModel
+@{
+}
+
+@*Font for search*@
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<body>
+     <br />    <br />    <br />
+  <table class="center">
+      <tr>
+          <td> <img src="~/img/fitnesstrainer.png" alt="FitnessTrainer" width="300px" height="auto" class="trainer_image"/> @*Fitness trainer sample bernie*@
+              @*Message trainer button*@
+              <br /> <br />
+                <div class="wrap"><a href="#" class="button">Connect</a> </div> 
+                <br />
+                <div class="wrap"><a href="/Chat" class="button">Send a message</a> </div> 
+              <br /> "He who is not courageous enough to take risks will accomplish nothing in life"
+               A constant grind 💪. Join me on this journey 🏋️.  
+          </td>
+          <td> 
+              @*Trainer Details*@
+              <span style="color:#202026; font-size:200%"> Bernie White </span> <br />
+              <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="fitnessicon" width="40px" height="auto"/> 
+              <span style="color:crimson">Fitness Trainer, Swimming Coach</span> | <img src="~/img/inperson.svg" width="16px" height="auto"/> In person 
+              <img src="~/img/online.svg" width="16px" height="auto"/> Online   
+              <br />
+              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+              <img src="~/img/halfstar.svg" width="20px" height="auto"/>
+              37 reviews
+              @*Biography*@
+              <hr class="solid"/>
+                      <span style="font-weight:bold; color:#32323b"> Biography </span>
+                      <br /> 
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat
+
+              <hr class="solid"/>
+                      <span style="font-weight:bold; color:#32323b"> Classes/Activities </span>
+                      <br /> 
+                      <div class="wrap"><a href="#" onClick="return false;" class="button">Personal Training</a> </div> 
+                      <br />
+                      <div class="wrap"><a href="#" onClick="return false;" class="button">Swimming Coach</a> </div>
+
+              <hr class="solid"/>
+                      <span style="font-weight:bold; color:#32323b"> Recent Reviews </span>
+                      <br /> 
+                        “Cras vel semper dolor. Praesent egestas accumsan lorem, sed 
+                        blandit enim mattis ac. Nullam purus nunc, fermentum.” 
+                        <br /> 
+                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
+                        - John H, Trainee
+
+              <hr class="solid"/>
+                      <span style="font-weight:bold; color:#32323b"> Trainees </span>
+                      <br /> 
+
+                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
+                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
+                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
+                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
+                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
+                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
+          </td>
+
+      </tr>
+           @*Trainer Details*@
+              <tr>
+                 <td> </td>
+                 <td> 
+                    <hr class="solid"/> 
+                    <span style="font-weight:bold; color:#32323b"> Location </span>
+                    <img src="~/img/location.png" width="auto" height="auto" class="location"/>
+                 </td>
+              </tr>
+  </table>
+
+
+<hr class="solid" />
+    
+
+
+  </body>
+
+  <style>
+      /*for testing layout*/
+/*      table, th, td, tr {
+  border: 1px solid black;
+}*/
+body{
+    background-image: url('../img/TrainerProWebsiteBodyWatermark.png');
+}
+
+table.center{
+  margin-left: auto; 
+  margin-right: auto;
+}
+.trainer_image{
+    border-radius:15px;
+}
+.user_image{
+    border-radius:5px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 90px 0;
+}
+
+td {
+    padding: 10px 0;
+}
+
+/* Solid divider */
+hr.solid {
+  border-top: 1px solid #bbb;
+}
+
+/*Results text*/
+.results{
+    color: silver;
+    text-align:center;
+}
+.button {
+    width: 140px;
+    height: 50px;
+    line-height:50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: crimson;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    display:grid;
+}
+ .button:hover {
+  background-color: aliceblue;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: crimson;
+}
+.button:focus {
+  background-color: lavender;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: crimson;
+}
+
+.button:active {
+  background-color: white;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: crimson;
+  transform: translateY(-7px);
+}
+.checked{
+    color:orange;
+}
+
+
+</style>

@@ -1,0 +1,475 @@
+﻿@page
+@model TrainDEv.Pages.trainee_profileModel
+@{
+}
+<html>
+<style>
+    body {
+        background-image: url('../images/Background.png');
+    }
+    @*button*@
+    .btn {
+        width: 200px;
+        height: 40px;
+        background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+        border: none;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        line-height: 30px;
+    }
+
+    .btn span {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: block;
+    }
+
+    .btn:hover {
+        background: transparent;
+        color: #76aef1;
+    }
+
+    .btn::before,
+    .btn::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1), 10px 10px 20px 0px rgba(0, 0, 0, .4), 6px 6px 5px 0px rgba(0, 0, 0, .3);
+        transition: all 0.8s ease;
+        padding: 0;
+    }
+
+    .btn::before {
+        top: 0;
+        right: 0;
+    }
+
+    .btn::after {
+        bottom: 0;
+        left: 0;
+    }
+
+    .btn:hover::before,
+    .btn:hover::after {
+        height: 100%;
+    }
+
+    .btn span::before,
+    .btn span::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 0px;
+        box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1), 10px 10px 20px 0px rgba(0, 0, 0, .4), 6px 6px 5px 0px rgba(0, 0, 0, .3);
+        transition: all 0.8s ease;
+    }
+
+    .btn span::before {
+        top: 0;
+        left: 0;
+    }
+
+    .btn span::after {
+        bottom: 0;
+        right: 0;
+    }
+
+    .btn span:hover::before,
+    .btn span:hover::after {
+        width: 100%;
+    }
+
+        @*find button*@ .fbtn {
+        width: 100px;
+        height: 30px;
+        background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+        border: none;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        line-height: 30px;
+    }
+
+    .fbtn span {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: block;
+    }
+
+    .fbtn:hover {
+        background: transparent;
+        color: #76aef1;
+    }
+
+    .fbtn::before,
+    .fbtn::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1), 10px 10px 20px 0px rgba(0, 0, 0, .4), 6px 6px 5px 0px rgba(0, 0, 0, .3);
+        transition: all 0.8s ease;
+        padding: 0;
+    }
+
+    .fbtn::before {
+        top: 0;
+        right: 0;
+    }
+
+    .fbtn::after {
+        bottom: 0;
+        left: 0;
+    }
+
+    .fbtn:hover::before,
+    .fbtn:hover::after {
+        height: 100%;
+    }
+
+    .fbtn span::before,
+    .fbtn span::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 0px;
+        box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1), 10px 10px 20px 0px rgba(0, 0, 0, .4), 6px 6px 5px 0px rgba(0, 0, 0, .3);
+        transition: all 0.8s ease;
+    }
+
+    .fbtn span::before {
+        top: 0;
+        left: 0;
+    }
+
+    .fbtn span::after {
+        bottom: 0;
+        right: 0;
+    }
+
+    .fbtn span:hover::before,
+    .fbtn span:hover::after {
+        width: 100%;
+    }
+
+</style>
+<body>
+    <center>
+        <table height="500px" width="1200px">
+
+            <tr align="center">
+                <th colspan="2"><h5>My Trainee Profile Account Overview</h5></th>
+            </tr>
+
+            <tr>
+                <td style="width:400px" >
+                    <center>
+                        <img src="~/images/trainee_photo.jpg" />
+                        <br />
+                        <br />
+                        <a href="trainee_profile">
+                            <button class="btn"><span>Overview</span></button>
+                        </a>
+                        <br />
+                        <br />
+                        <a href="trainee_profile_edit">
+                            <button class="btn"><span>Account Setting<span></button>
+                        </a>
+                        <br />
+                        <br />
+                        <a href="trainee_check_in">
+                            <button class="btn"><span>Check-In<span></button>
+                        </a>
+                        <br />
+                        <br />
+                        <a href="Chat">
+                            <button class="btn"><span>Chat<span></button>
+                        </a>
+                        <br />
+                        <br />
+                        <a href="trainee_check_in">
+                            <button class="btn"><span>Report<span></button>
+                        </a>
+                    </center>
+                </td>
+
+                <td>
+                    <img src="~/images/user_icon.jpg" height="20" width="20" />
+                    <b>User name:</b>
+                    <p>John</p>
+                    <hr />
+                    <img src="~/images/gender_icon.png" height="20" width="20" />
+                    <b>Gender:</b>
+                    <p>Male</p>
+                    <hr />
+                    <img src="~/images/email_icon.jpg" height="20" width="20" />
+                    <b>Email:</b>
+                    <p>12345678@gmail.com</p>
+                    <hr />
+                    <img src="~/images/phone_icon.png" height="20" width="20" />
+                    <b>Phone:</b>
+                    <p>1234567890</p>
+                    <hr />
+                    <img src="~/images/intersting_icon.png" height="20" width="20" />
+                    <b>I am interested in:</b>
+                    <p>Sports</p>
+                    <hr />
+                    <img src="~/images/location_icon.jpg" height="20" width="20" />
+                    <b>Location:</b>
+                    <p>city.......123</p>
+                    <hr />
+                    <img src="~/images/link_icon.png" height="20" width="20" />
+                    <b>I linked with:</b>
+                    <br />
+
+                    <a href="trainee_profile_link_click"><img src="~/img/fitnesstrainer.png" width="60" height="50" /></a>丨
+                    <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="60" height="50" />丨
+                    <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="60" height="50" />
+                    <a href="SearchResults">
+                        <button class="fbtn" style="margin-left:300px">Find trainer</button>
+                    </a>
+                    <hr />
+                 </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <center>
+                        <table border="1" width="800" height="300">
+                            <tr align="center" >
+                                <th colspan="7" style="color: white; background: lightblue;">
+                                    December 2021
+                                </th>
+                            </tr>
+
+                            <tr align="center">
+                                <th style="color: white; background: lightblue;">Su</th>
+                                <th style="color: white; background: lightblue;">Mo</th>
+                                <th style="color: white; background: lightblue;">Tu</th>
+                                <th style="color: white; background: lightblue;">We</th>
+                                <th style="color: white; background: lightblue;">Th</th>
+                                <th style="color: white; background: lightblue;">Fr</th>
+                                <th style="color: white; background: lightblue;">Sa</th>
+                            </tr>
+
+                            <tr align="center">
+                                <td height="100" width="100">28</td>
+                                <td height="100" width="100">29</td>
+                                <td height="100" width="100">30</td>
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                1<br />
+                                <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="40" height="40" />
+                                </td>
+                                <td height="100" width="100" bgcolor="#FF3300">2</td>
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                3<br />
+                                <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                </td>
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                4<br />
+                                <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                </td>
+                            </tr>
+
+                            <tr align="center">
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                    5<br />
+                                    <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                </td>
+                                <td height="100" width="100" bgcolor="#FF3300">6</td>
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                    7<br />
+                                    <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                </td>
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                    8<br />
+                                    <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                </td>
+                                <td height="100" width="100" bgcolor="#FF3300">9</td>
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                    10<br />
+                                    <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                </td>
+                                <td height="100" width="100" bgcolor="#00FF00">
+                                    11<br />
+                                    <img src="~/img/fitnesstrainer.png" width="40" height="40" />
+                                </td>
+                            </tr>
+
+                            <tr align="center">
+                                <td height="100" width="100" bgcolor="#FF3300">12</td>
+                                <td height="100" width="100">13</td>
+                                <td height="100" width="100">14</td>
+                                <td height="100" width="100">15</td>
+                                <td height="100" width="100">16</td>
+                                <td height="100" width="100">17</td>
+                                <td height="100" width="100">18</td>
+                            </tr>
+
+                            <tr align="center">
+                                <td height="100" width="100">19</td>
+                                <td height="100" width="100">20</td>
+                                <td height="100" width="100">21</td>
+                                <td height="100" width="100">22</td>
+                                <td height="100" width="100">23</td>
+                                <td height="100" width="100">24</td>
+                                <td height="100" width="100">25</td>
+                            </tr>
+
+                            <tr align="center">
+                                <td height="100" width="100">26</td>
+                                <td height="100" width="100">27</td>
+                                <td height="100" width="100">28</td>
+                                <td height="100" width="100">29</td>
+                                <td height="100" width="100">30</td>
+                                <td height="100" width="100">31</td>
+                                <td height="100" width="100">1</td>
+                            </tr>
+
+                        </table>
+                    </center>
+
+
+                </td>
+            </tr>
+
+        </table>
+    </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<center>
+        <img src="~/images/trainee_photo.jpg" />
+        <a href="trainee_profile_edit"><button style="margin-left:400px">Edit</button></a>
+    </center>
+    <center>
+
+        <p align="left" style="margin-left:430px">User name:John</p>
+        <p align="left" style="margin-left:430px">Gender:Male</p>
+        <p align="left" style="margin-left:430px">Email:12345678@gmail.com</p>
+        <p align="left" style="margin-left:430px">Phone:1234567890</p>
+        <p align="left" style="margin-left:430px">i am interesting in:Sports</p>
+        <p align="left" style="margin-left:430px">Location:city.......123</p>
+        <p align="left" style="margin-left:430px">I linked with:</p>
+
+        <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="60" height="50" />丨
+        <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="60" height="50" />
+    </center>
+    <hr />
+
+    <center>
+        <table border="1" width="600" height="200">
+            <tr align="center">
+                <th colspan="7">
+                    December 2021
+                </th>
+            </tr>
+
+            <tr align="center">
+                <th>Su</th>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+            </tr>
+
+            <tr align="center">
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td bgcolor="#00FF00">1</td>
+                <td bgcolor="#FF3300">2</td>
+                <td bgcolor="#00FF00">3</td>
+                <td bgcolor="#00FF00" 4</td>
+            </tr>
+
+            <tr align="center">
+                <td bgcolor="#00FF00">5</td>
+                <td bgcolor="#FF3300">6</td>
+                <td bgcolor="#00FF00">7</td>
+                <td bgcolor="#00FF00">8</td>
+                <td bgcolor="#FF3300">9</td>
+                <td bgcolor="#00FF00">10</td>
+                <td bgcolor="#00FF00">11</td>
+            </tr>
+
+            <tr align="center">
+                <td bgcolor="#FF3300">12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+
+            <tr align="center">
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+
+            <tr align="center">
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+            </tr>
+
+        </table>
+    </center>*@
+</body>
+</html>

@@ -1,0 +1,207 @@
+﻿@page
+@model Test_4._0.Pages.HomeModel
+@{
+}
+<div class="banners-container">
+    <div class="banner" style="background-image: url('../img/bluegradient.jpg');">
+        <article class="banner">
+            <section class="banner-copy">
+                <h1>Are you a trainer?</h1>
+                <br />
+                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</h6>
+                <br />
+                <a href="/register_trainer" class="button">Setup your account</a>
+            </section>
+        </article>
+    </div>
+
+    <div class="text-center" style="margin-top:10%">
+        <img src="~/img/trainerprologo.svg" style="width:100%; max-width:800px" />
+        <p>&nbsp;</p>
+        <h2 class="display-4">Find.Connect.Train.</h2>
+    </div>
+
+    @*Search bar*@
+    <div class="wrapper">
+        <div class="search_box">
+            <a href="/SearchResults"><div class="search_btn"><i class="fas fa-search"></i></div> </a>
+            <input type="text" class="input_search" placeholder="What kind of trainer are you after?">
+        </div>
+    </div>
+
+    <br />
+    <hr class="solid" />
+    <p class="cattext">Browse courses by category</p>
+
+    <div>
+        <table class="center">
+            <tr>
+                <td> <a href="/Health"> <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="Health&Fitness" width="64px" height="auto" /> <br />Health &<br /> Fitness</td> </a>
+                <td> <a href="/Arts"> <img src="~/img/TrainerPro - Website_Arts & Entertainment Icon.svg" alt="Arts&Ent" width="64px" height="auto" /> <br />Arts &<br /> Entertainment</td> </a>
+                <td> <a href="/Education"> <img src="~/img/TrainerPro - Website_Education & Languages Icon.svg" alt="Edu&Lang" width="64px" height="auto" /> <br />Education &<br /> Languages</td> </a>
+                <td> <a href="/Beauty"> <img src="~/img/TrainerPro - Website_Health & Beauty Icon.svg" alt="Heal&Bea" width="64px" height="auto" /> <br />Health &<br /> Beauty</td> </a>
+                <td> <a href="/Tech"> <img src="~/img/TrainerPro - Website_Business & Technology Icon.svg" alt="Bus&Tech" width="64px" height="auto" /> <br />Business &<br /> Health</td> </a>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div>
+    <br /><br /><br /><br />
+    <table class="center">
+        <tr>
+            <td style="color:darkslateblue; font-weight:500;">
+                TrainerPro is your one-stop online learning
+                platform for skills you have been
+                dreaming to learn.
+                <span style="color:cornflowerblue; font-weight:450;">
+                    <br /> <br />
+                    Cras vel semper dolor. Praesent egestas accumsan lorem, sed blandit enim
+                    mattis ac. Nullam purus nunc, fermentum non lacinia nec, feugiat at diam.
+                    Aenean eu placerat lectus. Duis augue odio, dignissim in felis sed, tincidunt
+                    cursus tortor. Nulla facilisi.  Morbi condimentum aliquam risus, nec venenatis
+                    turpis vulputate molestie. Morbi luctus gravida turpis nec ullamcorper. Morbi Luctus.
+                </span>
+            </td>
+            <td> <img src="~/img/trainerconnect.png" alt="trainerconnect" width="468px" height="367px" /></td>
+        </tr>
+    </table>
+</div>
+
+<style>
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-image: url('../img/TrainerProWebsiteBodyWatermark.png');
+    }
+    /*For banner*/
+    .banners-container {
+        display: table;
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+    }
+        /*For banner*/
+        .banners-container .banner {
+            display: table-cell;
+            height: 100;
+            width: 25%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+    /*Text within vertical banner*/
+    h1, h6 {
+        color: white;
+        text-align: center;
+    }
+    /*Setup account button*/
+    .button {
+        background-color: white;
+        border: none;
+        border-radius: 25px;
+        color: cornflowerblue;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        display: grid;
+    }
+    /* Solid divider */
+    hr.solid {
+        border-top: 1px solid #bbb;
+        width: 50%;
+    }
+    /*Category text*/
+    .cattext {
+        color: silver;
+        text-align: center;
+    }
+
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 90px 0;
+    }
+
+    td {
+        padding: 10px 0;
+    }
+
+    /*Wrapper for search*/
+    .wrapper {
+        min-height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*For search*/
+    .search_box {
+        background: #27a2dd;
+        position: relative;
+        padding: 15px;
+        border-radius: 50px;
+        display: flex;
+    }
+
+        /*For search*/
+        .search_box .search_btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #6aceec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+    /*For search*/
+    .search_btn:hover {
+        background: #18849c;
+    }
+
+    /*For search*/
+    .search_box .input_search {
+        outline: none;
+        border: 0;
+        background: #6aceec;
+        border-radius: 50px;
+        padding: 15px 20px;
+        width: 300px;
+        height: 50px;
+        color: #fff;
+    }
+
+    /*For search*/
+    ::placeholder {
+        color: black;
+    }
+
+    /*For search*/
+    ::-webkit-input-placeholder {
+        color: #fff;
+    }
+
+    /*For search*/
+    :-ms-input-placeholder {
+        color: #fff;
+    }
+</style>

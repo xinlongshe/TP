@@ -1,0 +1,129 @@
+﻿@page
+@model TrainDEv.Pages.careersModel
+@{
+    ViewData["Title"] = "careers";
+}
+    <!DOCTYPE html>
+<html> 
+<head>
+    <title>Career</title>
+
+    <style>
+        body {
+            background-image: url('../images/Background.png');
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: end;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: olivedrab;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .wrapper {
+            min-height: 25vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*For search*/
+        .search_box {
+            background: #d95286;
+            position: relative;
+            padding: 10px;
+            border-radius: 30px;
+            display: flex;
+        }
+            /*For search*/
+            .search_box .search_btn {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #d97c9f;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+        /*For search*/
+        .search_btn:hover {
+            background: #b05a7a;
+        }
+        /*For search*/
+        .search_box .input_search {
+            outline: none;
+            border: 0;
+            background: #b05a7a;
+            border-radius: 50px;
+            padding: 15px 20px;
+            width: 300px;
+            height: 50px;
+            color: #fff;
+        }
+        /*For search*/
+        ::placeholder {
+            color: black;
+        }
+        /*For search*/
+        ::-webkit-input-placeholder {
+            color: #fff;
+        }
+        /*For search*/
+        :-ms-input-placeholder {
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Careers Section of TrainerPro</h1>
+
+    <div>
+        We have an exciting opportunity for a junior developer that has some experience with both frontend and backend development to join our fun and friendly team.
+        You will be responsible for developing and maintaining TrainerPro’s suite of internal and customer facing platforms under the tech lead.
+    </div>
+
+
+    <button class="button button1">Lets go!</button>
+
+
+    <div class="wrapper">
+        <div class="search_box">
+            <div class="search_btn"><i class="fas fa-search"></i></div>
+            <input type="text" class="input_search" placeholder="What kind of trainer are you after?">
+        </div>
+
+    </div>
+
+    <table>
+        <tr>
+            <td> <a href="/Health"> <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="Health&Fitness" width="90px" height="auto" /> <br />Health &<br /> Fitness</td> </a>
+            <td> <a href="/Arts"> <img src="~/img/TrainerPro - Website_Arts & Entertainment Icon.svg" alt="Arts&Ent" width="90px" height="auto" /> <br />Arts &<br /> Entertainment</td> </a>
+            <td> <a href="/Education"> <img src="~/img/TrainerPro - Website_Education & Languages Icon.svg" alt="Edu&Lang" width="90px" height="auto" /> <br />Education &<br /> Languages</td> </a>
+
+            <td> <a href="/Tech"> <img src="~/img/TrainerPro - Website_Business & Technology Icon.svg" alt="Bus&Tech" width="90px" height="auto" /> <br />Business &<br /> Technology</td> </a>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+

@@ -1,0 +1,385 @@
+﻿@page
+@model TrainDEv.Pages.register_trainerModel
+@{
+}
+<style>
+    body {
+        background-image: url('../images/Background.png');
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+
+        .topnav a {
+            float: left;
+            color: #050505;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+
+    @*text*@ .mytxt {
+        color: #333;
+        line-height: normal;
+        font-family: "Microsoft YaHei",Tahoma,Verdana,SimSun;
+        font-style: normal;
+        font-variant: normal;
+        font-size-adjust: none;
+        font-stretch: normal;
+        font-weight: normal;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        padding-top: 4px;
+        padding-right: 4px;
+        padding-bottom: 4px;
+        padding-left: 4px;
+        font-size: 15px;
+        outline-width: medium;
+        outline-style: none;
+        outline-color: invert;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        text-shadow: 0px 1px 2px #fff;
+        background-attachment: scroll;
+        background-repeat: repeat-x;
+        background-position-x: left;
+        background-position-y: top;
+        background-size: auto;
+        background-origin: padding-box;
+        background-clip: border-box;
+        background-color: rgb(255,255,255);
+        margin-right: 8px;
+        border-top-color: #ccc;
+        border-right-color: #ccc;
+        border-bottom-color: #ccc;
+        border-left-color: #ccc;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+    }
+
+    .mytxt:focus {
+        border: 1px solid #fafafa;
+        -webkit-box-shadow: 0px 0px 6px #007eff;
+        -moz-box-shadow: 0px 0px 5px #007eff;
+        box-shadow: 0px 0px 5px #007eff;
+    }
+
+    .button1 {
+        width: 140px;
+        height: 50px;
+        line-height: 50px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: crimson;
+        background-color: #fff;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        cursor: pointer;
+        display: grid;
+    }
+
+        .button1:hover {
+            background-color: aliceblue;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: crimson;
+        }
+
+        .button1:focus {
+            background-color: lavender;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: crimson;
+        }
+
+        .button1:active {
+            background-color: white;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: crimson;
+            transform: translateY(-7px);
+        }
+
+    .checked {
+        color: orange;
+    }
+
+    /*For banner*/
+    .banners-container {
+        display: table;
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+    }
+        /*For banner*/
+        .banners-container .banner {
+            display: table-cell;
+            height: 100;
+            width: 25%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+    /*Text within vertical banner*/
+    h1, h6 {
+        color: white;
+        text-align: center;
+    }
+    /*Setup account button*/
+    .button {
+        background-color: white;
+        border: none;
+        border-radius: 25px;
+        color: cornflowerblue;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        display: grid;
+    }
+
+</style>
+<body>
+
+
+    <center>
+        <h1>@ViewData["Title"]</h1>
+
+        <b>hi,welcome to TrainerPro, Please register your account here</b>
+
+        <div id="app" class="banners-container">
+            <div class="banner" style="background-image: url('../img/bluegradient.jpg');">
+                <article class="banner">
+                    <section class="banner-copy">
+                        <h1>Are you a trainee?</h1>
+                        <br />
+                        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</h6>
+                        <br />
+                        <a href="/register_trainee" class="button">Setup your account</a>
+                    </section>
+                </article>
+            </div>
+
+            <form action=" " method="post">
+                <table>
+                    <tr>
+                        <td height="50px">Username:<font color="red">*</font></td>
+                        <td><input type="text" asp-for="User.Username" class="mytxt" placeholder="Enter User Name Here" /></td>
+
+                    </tr>
+
+                    <tr>
+                        <td height="50px">Password:<font color="red">*</font></td>
+                        <td>
+                            <input type="password" asp-for="User.Password" class="mytxt" placeholder="Enter Password Here" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="50px">Gender:<font color="red">*</font></td>
+                        <td>
+                            <input type="radio" v-on:click="GenderChange" name="gender" value="Male" />Male
+                            <input type="radio" v-on:click="GenderChange" name="gender" value="Femail" />Femail
+                            <input type="radio" v-on:click="GenderChange" name="gender" value="Others" />Others
+                            <input id="Hidden1" asp-for="Trainer.Gender" type="hidden" />
+                            <span asp-validation-for="Trainer.Gender" class="text-danger"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="50px">Phone:<font color="red">*</font></td>
+                        <td>
+                            <select id="codeSelect" v-on:change="selectFn($event)">
+                                <option selected value="+61">+61</option>
+                                <option value="+51">+51</option>
+                                <option value="+41">+41</option>
+                                <option value="+31">+31</option>
+                                <option value="+21">+21</option>
+                            </select>
+                            <input id="traineePhone" v-on:change="phoneChage" class="mytxt" type="text" placeholder="Enter Your Number Here" />
+                            <input id="Hidden3" asp-for="Trainer.Phone" type="hidden" />
+                            <span asp-validation-for="Trainer.Phone" class="text-danger"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="50px">
+                            I am currently doing what kind to training:<font color="red">*</font>
+                        </td>
+                        <td>
+                            <input type="checkbox" v-on:click="InterestingChange" value="Health" />Health
+                            <input type="checkbox" v-on:click="InterestingChange" value="Education" />Education
+                            <input type="checkbox" v-on:click="InterestingChange" value="Arts" />Arts
+                            <input type="checkbox" v-on:click="InterestingChange" value="Sports" />Sports
+                            <input type="checkbox" v-on:click="InterestingChange" value="Business" />Business
+                            <input id="Hidden2" asp-for="Trainer.KindOfTrainer" type="hidden" />
+                            <span asp-validation-for="Trainer.KindOfTrainer" class="text-danger"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="50px">Certificate:(optional)</td>
+
+                        <td><input placeholder="Enter Your Certificate Here" asp-for="Trainer.Certificate" class="mytxt" /></td>
+
+                    </tr>
+
+                    <tr>
+                        <td height="50px">Describe yourself:(optional)</td>
+
+                        <td><input placeholder="Enter Your Information Here" asp-for="Trainer.DescribeYourself" class="mytxt" /></td>
+
+                    </tr>
+
+                    <tr>
+                        <td height="50px">Location:<font color="red">*</font></td>
+                        <td>
+                            <input type="text" asp-for="Trainer.Location" placeholder="Enter Your Location Here" class="mytxt" />
+                            <span asp-validation-for="Trainer.Email" class="text-danger"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="50px">Email:<font color="red">*</font></td>
+                        <td>
+                            <input type="text" asp-for="Trainer.Email" placeholder="Enter Your Email Here" class="mytxt" />
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td height="50px"></td>
+                        <td>We'll send a confirmation code to your email.<input id="btn" type="button" v-on:click="Continue" value="Continue" /></td>
+
+                    </tr>
+
+                    <tr>
+                        <td height="50px">code:<font color="red">*</font></td>
+                        <td>
+                            <input type="text" asp-for="emailCode.ValueCode" placeholder="Enter Your Code Here" class="mytxt" />
+                            <span asp-validation-for="emailCode.ValueCode" class="text-danger"></span>
+                            <input id="Hidden5" type="hidden" asp-for="emailCode.SentCode" />
+                        </td>
+                    </tr>
+
+                    <tr align="center">
+                        <td colspan="2" height="50px">
+                            <input type="checkbox" id="agreement" name="agreement"  v-on:click="agreementChange" />
+                            <label for="agreement" style=" color:red;">I agree all the agreement</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="50px">
+                            <input type="submit" id="savebtn" disabled="true" asp-page-handler="Save" name="submit_register" value="Create" />
+                        </td>
+
+                        <td>
+                            Already have a account!<a href="login_trainee">Login</a>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+    </center>
+    <script src="~/js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: ''
+            },
+            methods: {
+                Continue: function () {
+                    //formaction = "/Student/Add?handler=OnPostSendEmail"
+                    $.ajax({
+                        url: "register_trainer?handler=SendEmail",
+                        method: "Post",
+                        data: JSON.stringify($("#Trainer_Email").val()),
+                        contentType: "application/json;charset=UTF-8",
+                        dataType: "json",
+                        success: function (data) {
+                            if (data) {
+                                $("#Hidden5").val(data.Code);
+                                //console.log(data)
+                                alert(data.Mes);
+                            }
+                        },
+                        error: function () {
+
+                        }
+                    });
+                },
+                InterestingChange: function () {
+                    var spCodesTemp = "";
+                    $('input:checkbox:checked').each(function (i) {
+                        if (0 == i) {
+                            spCodesTemp = $(this).val();
+                        } else {
+                            spCodesTemp += ("," + $(this).val());
+                        }
+                    });
+                    $("#Hidden2").val(spCodesTemp);
+                },
+                GenderChange: function () {
+                    var gender = $('input[name="gender"]:checked ').val();
+                    $("#Hidden1").val(gender);
+                },
+                selectFn: function (e) {
+                    //var code = $('#testSelect option:selected').text();
+                    var phone = $("#traineePhone").val();
+                    $("#Hidden3").val(e.target.value + phone);
+                },
+                phoneChage: function () {
+                    var code = $('#codeSelect option:selected').text();
+                    var phone = $("#traineePhone").val();
+                    $("#Hidden3").val(code + phone);
+                },
+                agreementChange: function () {
+                    var isChecked = $('#agreement').prop('checked');
+                    if (isChecked) {
+                        $("#savebtn").attr("disabled", false);
+                    }
+                    else {
+                        $("#savebtn").attr("disabled", true);
+                    }
+                }
+
+            },
+            mounted: function () {
+                $("#savebtn").attr("disabled", true);
+            }
+        })
+    </script>
+</body>

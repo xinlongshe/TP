@@ -1,0 +1,221 @@
+﻿@page
+@model TrainDEv.Pages.Admin_inbox_newModel
+@{
+}
+
+<html>
+<style>
+    body {
+        background-image: url('../images/Background.png');
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+
+        .topnav a {
+            float: left;
+            color: #050505;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+
+    @*button*@ .btn {
+        width: 350px;
+        height: 40px;
+        background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+        border: none;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        line-height: 30px;
+    }
+
+    .btn span {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: block;
+    }
+
+    .btn:hover {
+        background: transparent;
+        color: #76aef1;
+    }
+
+    .btn::before,
+    .btn::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1), 10px 10px 20px 0px rgba(0, 0, 0, .4), 6px 6px 5px 0px rgba(0, 0, 0, .3);
+        transition: all 0.8s ease;
+        padding: 0;
+    }
+
+    .btn::before {
+        top: 0;
+        right: 0;
+    }
+
+    .btn::after {
+        bottom: 0;
+        left: 0;
+    }
+
+    .btn:hover::before,
+    .btn:hover::after {
+        height: 100%;
+    }
+
+    .btn span::before,
+    .btn span::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 0px;
+        box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1), -4px -4px 5px 0px rgba(255, 255, 255, 1), 10px 10px 20px 0px rgba(0, 0, 0, .4), 6px 6px 5px 0px rgba(0, 0, 0, .3);
+        transition: all 0.8s ease;
+    }
+
+    .btn span::before {
+        top: 0;
+        left: 0;
+    }
+
+    .btn span::after {
+        bottom: 0;
+        right: 0;
+    }
+
+    .btn span:hover::before,
+    .btn span:hover::after {
+        width: 100%;
+    }
+
+    @*text*@ .mytxt {
+        color: #333;
+        line-height: normal;
+        font-family: "Microsoft YaHei",Tahoma,Verdana,SimSun;
+        font-style: normal;
+        font-variant: normal;
+        font-size-adjust: none;
+        font-stretch: normal;
+        font-weight: normal;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        padding-top: 4px;
+        padding-right: 4px;
+        padding-bottom: 4px;
+        padding-left: 4px;
+        font-size: 15px;
+        outline-width: medium;
+        outline-style: none;
+        outline-color: invert;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        text-shadow: 0px 1px 2px #fff;
+        background-attachment: scroll;
+        background-repeat: repeat-x;
+        background-position-x: left;
+        background-position-y: top;
+        background-size: auto;
+        background-origin: padding-box;
+        background-clip: border-box;
+        background-color: rgb(255,255,255);
+        margin-right: 8px;
+        border-top-color: #ccc;
+        border-right-color: #ccc;
+        border-bottom-color: #ccc;
+        border-left-color: #ccc;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+    }
+
+    .mytxt:focus {
+        border: 1px solid #fafafa;
+        -webkit-box-shadow: 0px 0px 6px #007eff;
+        -moz-box-shadow: 0px 0px 5px #007eff;
+        box-shadow: 0px 0px 5px #007eff;
+    }
+
+</style>
+<body>
+    <table height="500px" width="1200px">
+        <tr>
+            <td style="width:400px">
+                <center>
+                    <img src="~/images/admin.png" width="400" />
+                    <br />
+                    <img src="~/images/user_icon.jpg" height="20" width="20" />
+                    <b style="color:red">Admin</b>
+                    <hr />
+                    <br />
+                    <a href="admin">
+                        <button class="btn"><span>Trainee Management<span></button>
+                    </a>
+                    <br />
+                    <br />
+                    <a href="Admin-trainer-management">
+                        <button class="btn"><span>Trainer Management<span></button>
+                    </a>
+                    <br />
+                    <br />
+                    <a href="Admin-inbox">
+                        <button class="btn"><span>Inbox<span></button>
+                    </a>
+                    <br />
+                    <br />
+                    <a href="Chat">
+                        <button class="btn"><span>Custmers Service<span></button>
+                    </a>
+                </center>
+            </td>
+            <td valign="top">
+                <div class="topnav">
+                    <a class="active" href="Admin--inbox-new">New</a>
+                    <a href="Admin-inbox">Inbox</a>
+                    <a href="Admin-send">Send</a>
+                </div>
+
+                <p>To:</p>
+                <input /></br>
+                <p>Topic:</p>
+                <input /></br>
+                <p>Information:</p>
+                <input type="text" style="width:600px; height:400px" /></br>
+                <button style="margin-left:550px; margin-top:50px">send</button>
+
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

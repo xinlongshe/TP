@@ -1,0 +1,245 @@
+﻿@page
+@model TrainDEv.Pages.SearchResultsModel
+@{
+}
+
+@*Font for search*@
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<body>
+     <br />    <br />    <br />
+
+@*Search bar*@
+<div class="wrapper">
+	<div class="search_box">
+		<div class="search_btn"><i class="fas fa-search"></i></div>
+		<input type="text" class="input_search" placeholder="What kind of trainer are you after?">
+	</div>
+</div>
+
+<p class="filter_text" ><b>Filter by profession:</b>   
+</p>
+  <table class="center">
+      <tr>
+          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="Health&Fitness" width="64px" height="auto" id="health" onclick="filter_click('health');"/> <br/>Health</td> 
+          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Arts & Entertainment Icon.svg" alt="Arts&Ent" width="64px" height="auto" id="arts" onclick="filter_click('arts');"/> <br />Arts</td> 
+          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Education & Languages Icon.svg" alt="Edu&Lang" width="64px" height="auto" id="education" onclick="filter_click('education');"/> <br/>Education</td> 
+          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Health & Beauty Icon.svg" alt="Heal&Bea" width="64px" height="auto" id="beauty" onclick="filter_click('beauty');"/> <br/>Beauty</td>
+          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Business & Technology Icon.svg" alt="Bus&Tech" width="64px" height="auto" id="tech" onclick="filter_click('tech');"/> <br/>Technology </td> 
+      </tr>
+  </table>
+
+<hr class="solid" />
+
+<p class="results" >Showing results for: <b>sample</b> located in <b>sample, postcode, state</b>  
+</p>
+  @*Filter Dropdown*@
+  <div class="dropdown">
+      <button class="dropbtn">Filter by distance</button>
+      <div class="dropdown-content">
+      <a href="#">5km</a>
+      <a href="#">10km</a>
+      <a href="#">15km</a>
+      <a href="#">20km</a>
+      <a href="#">25km</a>
+      </div>
+  </div>
+
+@*Search results*@
+  <table >
+      <tr>
+      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
+          <br /> <p class="user_description">John Doe</p> <p>Fitness Trainer</p> </td>
+      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
+          <br /> <p class="user_description">William Smith</p> <p>Business Trainer, 2+</p> </td>
+      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
+          <br /> <p class="user_description">Mary Smith</p> <p>Language Trainer</p> </td>
+  </tr>
+  </table>
+
+    <table >
+      <tr>
+      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
+          <br /> <p class="user_description">John Doe</p> <p>Fitness Trainer</p> </td>
+      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
+          <br /> <p class="user_description">William Smith</p> <p>Business Trainer, 2+</p> </td>
+      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
+          <br /> <p class="user_description">Mary Smith</p> <p>Language Trainer</p> </td>
+  </tr>
+  </table>
+
+  </body>
+
+  <style>
+
+  .dropbtn {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius:5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #5077BE;
+}
+
+body{
+    background-image: url('../img/TrainerProWebsiteBodyWatermark.png');
+}
+
+table.center{
+  margin-left: auto; 
+  margin-right: auto;
+}
+.user_image{
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    padding-bottom:25px;
+}
+
+.user_description{
+/*    padding-top:25px;*/
+/*    padding-bottom:50px;*/
+/*    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;*/
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 90px 0;
+}
+
+td {
+    padding: 10px 0;
+    text-align:center;
+}
+
+/* Solid divider */
+hr.solid {
+  border-top: 1px solid #bbb;
+}
+
+/*Results text*/
+.results{
+    color: silver;
+    text-align:center;
+}
+
+/*Filter text*/
+.filter_text{
+    color: #395f5f;
+    text-align:center;
+}
+
+/*Wrapper for search*/
+.wrapper{
+	min-height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*For search*/
+.search_box{
+	background: #27a2dd;
+	position: relative;
+	padding: 15px;
+	border-radius: 50px;
+	display: flex;
+}
+
+/*For search*/
+.search_box .search_btn{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #6aceec;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+/*For search*/
+.search_btn:hover{
+    background: #18849c;
+}
+
+/*For search*/
+.search_box .input_search{
+	outline: none;
+	border: 0;
+	background: #6aceec;
+	border-radius: 50px;
+	padding: 15px 20px;
+	width: 300px; 
+	height: 50px;
+	color: #fff;
+}
+
+/*For search*/
+::placeholder {
+    color: black;
+}
+
+/*For search*/
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+/*For search*/
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+.filter_button{
+cursor: pointer;
+}
+</style>
+
+<script>
+    function filter_click(id){
+        var button = document.getElementById(id).style.filter;
+        if (button == "grayscale(0%)"){
+        document.getElementById(id).style.filter = "grayscale(100%)"
+        }
+        else{
+        document.getElementById(id).style.filter = "grayscale(0%)"
+        }
+    }
+</script>
