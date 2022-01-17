@@ -10,13 +10,16 @@
      <br />    <br />    <br />
   <table class="center">
       <tr>
-          <td> <img src="~/img/fitnesstrainer.png" alt="FitnessTrainer" width="300px" height="auto" class="trainer_image"/> @*Fitness trainer sample bernie*@
+          <td>
+              <img src="~/img/fitnesstrainer.png" alt="FitnessTrainer" width="300px" height="auto" class="trainer_image" /> @*Fitness trainer sample bernie*@
               @*Message trainer button*@
               <br /> <br />
-                <div class="wrap"><a href="#" class="button">Connect</a> </div> 
-                <br />
-                <div class="wrap"><a href="/Chat" class="button">Send a message</a> </div> 
-              <br /> @Model.Trainer.DescribeYourself 
+              <div class="wrap"><a href="#" class="button">Connect</a> </div>
+              <br />
+              <div class="wrap"><a href="trainer_profile_edit" class="button">Account Setting</a> </div>
+              <br />
+              <div class="wrap"><a href="/Chat" class="button">Send a message</a> </div>
+              <br /> @Model.Trainer.DescribeYourself
           </td>
           <td>
               @*Trainer Details*@
