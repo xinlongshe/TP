@@ -216,6 +216,15 @@
                             <span asp-validation-for="Trainer.Gender" class="text-danger"></span>
                         </td>
                     </tr>
+                    <tr>
+                        <td height="50px">TeachingType:<font color="red">*</font></td>
+                        <td>
+                            <input type="radio" v-on:click="TeachingTypeChange" name="TeachingType" value="In person" />In person
+                            <input type="radio" v-on:click="TeachingTypeChange" name="TeachingType" value="Online" />Online
+                            <input id="HiddenT" asp-for="Trainer.TeachingType" type="hidden" />
+                            <span asp-validation-for="Trainer.TeachingType" class="text-danger"></span>
+                        </td>
+                    </tr>
 
                     <tr>
                         <td height="50px">Phone:<font color="red">*</font></td>
@@ -295,7 +304,7 @@
 
                     <tr align="center">
                         <td colspan="2" height="50px">
-                            <input type="checkbox" id="agreement" name="agreement"  v-on:click="agreementChange" />
+                            <input type="checkbox" id="agreement" name="agreement" v-on:click="agreementChange" />
                             <label for="agreement" style=" color:red;">I agree all the agreement</label>
                         </td>
                     </tr>
@@ -355,6 +364,10 @@
                 GenderChange: function () {
                     var gender = $('input[name="gender"]:checked ').val();
                     $("#Hidden1").val(gender);
+                },
+                TeachingTypeChange: function () {
+                    var TeachingType = $('input[name="TeachingType"]:checked ').val();
+                    $("#HiddenT").val(TeachingType);
                 },
                 selectFn: function (e) {
                     //var code = $('#testSelect option:selected').text();

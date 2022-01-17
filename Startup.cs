@@ -32,8 +32,8 @@ namespace Test_4._0
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-
+            services.AddSession();
+            services.AddHttpContextAccessor();
             //·¢ÓÊ¼þ ×¢Èë
             var config = new SendMailConfig();
             Configuration.GetSection("CommonConfig:sendMessage:SendMailConfig").Bind(config);
@@ -89,7 +89,7 @@ namespace Test_4._0
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseSession();
             app.UseHttpsRedirection();
 
             app.UseRouting();

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor  _httpContextAccessor
+@using Microsoft.AspNetCore.Http 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,13 +18,13 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="float:left;">
                     <ul class="navbar-nav flex-grow-1">
                         @*Search bar*@
                         <li class="nav-item">
-                                <div class="search_box_home">
-                                    <a href="/SearchResults"><div class="search_btn_home"><i class="fas fa-search"></i></div> </a>
-                                </div>
+                            <div class="search_box_home">
+                                <a href="/SearchResults"><div class="search_btn_home"><i class="fas fa-search"></i></div> </a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Home">Home</a>
@@ -35,6 +37,29 @@
                         </li>
                     </ul>
                 </div>
+                @if (_httpContextAccessor.HttpContext.Session.Keys.Contains("UserName"))
+                {
+                    
+                    <div style="float:right">
+                        <div class="dropdown">
+                            <div class="btn btn-primary button " style="line-height:40px !important" data-toggle="dropdown">
+                                @_httpContextAccessor.HttpContext.Session.GetString("UserName")
+                                <span class="caret"></span>
+                            </div>
+                            <ul class="dropdown-menu">
+                                @if (_httpContextAccessor.HttpContext.Session.GetString("UserType") == "Trainee")
+                                {
+                                    <li class="nav-item"><a class="nav-link text-dark" asp-page="/trainee_profile">个人信息</a></li>
+                                }
+                                else
+                                {
+                                     <li class="nav-item"><a class="nav-link text-dark" asp-page="/trainer_profile" >个人信息</a></li>
+                                }
+
+                                <li class="nav-item"><a class="nav-link text-dark" asp-page="/Home" >退出</a></li>
+                            </ul>
+                        </div>
+                    </div>}
             </div>
         </nav>
     </header>
@@ -86,7 +111,5 @@
     .search_btn_home:hover {
         background: #18849c;
     }
-
-
 </style>
 

@@ -52,6 +52,7 @@ namespace TrainDEv.Pages
             {
                 User.UserType = "Trainee";
                 User.FKId = traineeId;
+                User.Password = Common.GenerateMD5Hash(User.Password);
                 _userDapperRepository.Add(User);
 
                 return RedirectToPage("login_trainee");

@@ -16,60 +16,82 @@
                 <div class="wrap"><a href="#" class="button">Connect</a> </div> 
                 <br />
                 <div class="wrap"><a href="/Chat" class="button">Send a message</a> </div> 
-              <br /> "He who is not courageous enough to take risks will accomplish nothing in life"
-               A constant grind 💪. Join me on this journey 🏋️.  
+              <br /> @Model.Trainer.DescribeYourself 
           </td>
-          <td> 
+          <td>
               @*Trainer Details*@
-              <span style="color:#202026; font-size:200%"> Bernie White </span> <br />
-              <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="fitnessicon" width="40px" height="auto"/> 
-              <span style="color:crimson">Fitness Trainer, Swimming Coach</span> | <img src="~/img/inperson.svg" width="16px" height="auto"/> In person 
-              <img src="~/img/online.svg" width="16px" height="auto"/> Online   
+              <span style="color:#202026; font-size:200%"> @Model.User.Username </span>
+              @if (@Model.Trainer.Gender == "Femail")
+              {
+          <img src="~/images/nv.png" height="20" width="20" /> }
+                      else if (@Model.Trainer.Gender == "Male")
+                      {
+          <img src="~/images/nan.png" height="20" width="20" /> }
+                      else
+                      {
+          <img src="~/images/qita.png" height="20" width="20" />}
+
               <br />
-              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-              <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-              <img src="~/img/halfstar.svg" width="20px" height="auto"/>
+              <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="fitnessicon" width="40px" height="auto" />
+              <span style="color:crimson">@Model.Trainer.KindOfTrainer</span> |
+              @if (@Model.Trainer.TeachingType == "In person")
+              {
+          <img src="~/img/inperson.svg" width="16px" height="auto" /> }
+      else
+      {
+          <img src="~/img/online.svg" width="16px" height="auto" />}
+              @Model.Trainer.TeachingType
+
+
+
+              <br />
+
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+
+              <img src="~/img/halfstar.svg" width="20px" height="auto" />
               37 reviews
               @*Biography*@
-              <hr class="solid"/>
-                      <span style="font-weight:bold; color:#32323b"> Biography </span>
-                      <br /> 
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat
+              <hr class="solid" />
+              <span style="font-weight:bold; color:#32323b"> Biography </span>
+              <br />
+              @Model.Trainer.Certificate
 
-              <hr class="solid"/>
-                      <span style="font-weight:bold; color:#32323b"> Classes/Activities </span>
-                      <br /> 
-                      <div class="wrap"><a href="#" onClick="return false;" class="button">Personal Training</a> </div> 
-                      <br />
-                      <div class="wrap"><a href="#" onClick="return false;" class="button">Swimming Coach</a> </div>
+              <hr class="solid" />
+              <span style="font-weight:bold; color:#32323b"> Classes/Activities </span>
+              <br />
+              <div class="wrap"><a href="#" onClick="return false;" class="button">Personal Training</a> </div>
+              <br />
+              <div class="wrap"><a href="#" onClick="return false;" class="button">Swimming Coach</a> </div>
 
-              <hr class="solid"/>
-                      <span style="font-weight:bold; color:#32323b"> Recent Reviews </span>
-                      <br /> 
-                        “Cras vel semper dolor. Praesent egestas accumsan lorem, sed 
-                        blandit enim mattis ac. Nullam purus nunc, fermentum.” 
-                        <br /> 
-                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-                        <img src="~/img/fullstar.svg" width="20px" height="auto"/>
-                        - John H, Trainee
+              <hr class="solid" />
+              <span style="font-weight:bold; color:#32323b"> Recent Reviews </span>
+              <br />
+              “Cras vel semper dolor. Praesent egestas accumsan lorem, sed
+              blandit enim mattis ac. Nullam purus nunc, fermentum.”
+              <br />
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+              <img src="~/img/fullstar.svg" width="20px" height="auto" />
+              - John H, Trainee
 
-              <hr class="solid"/>
-                      <span style="font-weight:bold; color:#32323b"> Trainees </span>
-                      <br /> 
+              <hr class="solid" />
+              <span style="font-weight:bold; color:#32323b"> Trainees </span>
+              <br />
 
-                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
-                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
-                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
-                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
-                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
-                        <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image"/> </a>
+              <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image" /> </a>
+              <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image" /> </a>
+              <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image" /> </a>
+              <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image" /> </a>
+              <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image" /> </a>
+              <a href="/trainee_profile"><img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" width="50px" height="auto" class="user_image" /> </a>
           </td>
 
       </tr>

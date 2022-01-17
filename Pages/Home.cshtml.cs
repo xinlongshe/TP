@@ -11,6 +11,7 @@ namespace Test_4._0.Pages
     {
         public void OnGet()
         {
+            HttpContext.Session.Clear();
         }
     }
 }

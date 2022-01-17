@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Test_4._0.Common;
 using Test_4._0.Data;
 using Test_4._0.Data.Model;
 
@@ -40,12 +42,17 @@ namespace TrainDEv.Pages
             {
                 return Page();
             }
+            User.Password = Common.GenerateMD5Hash(User.Password);
             string sql = "select * from PrivacyUser where Username='" + User.Username + "' and Password='" + User.Password + "'";
             var list = _userDapperRepository.GetList(sql, null);
             if (list != null && list.Count() > 0)
             {
+                
                 var userEntity = list.FirstOrDefault();
-                if(userEntity.UserType=="Trainee")
+                HttpContext.Session.SetString("UserId", userEntity.FKId.ToString());
+                HttpContext.Session.SetString("UserName", userEntity.Username.ToString());
+                HttpContext.Session.SetString("UserType", userEntity.UserType.ToString());
+                if (userEntity.UserType=="Trainee")
                 {
                     return RedirectToPage("trainee_profile");
                 }

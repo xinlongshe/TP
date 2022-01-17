@@ -208,30 +208,31 @@
                 <td>
                     <img src="~/images/user_icon.jpg" height="20" width="20" />
                     <b>User name:</b>
-                    <p>John</p>
+                    <p>@Model.User.Username</p>
                     <hr />
                     <img src="~/images/gender_icon.png" height="20" width="20" />
                     <b>Gender:</b>
-                    <p>Male</p>
+                    <p>@Model.Trainee.Gender</p>
                     <hr />
                     <img src="~/images/email_icon.jpg" height="20" width="20" />
                     <b>Email:</b>
-                    <p>12345678@gmail.com</p>
+                    <p>@Model.Trainee.Email</p>
                     <hr />
                     <img src="~/images/phone_icon.png" height="20" width="20" />
                     <b>Phone:</b>
-                    <p>1234567890</p>
+                    <p>@Model.Trainee.Phone</p>
                     <hr />
                     <img src="~/images/intersting_icon.png" height="20" width="20" />
                     <b>I am interested in:</b>
-                    <p>Sports</p>
+                    <p>@Model.Trainee.Interesting</p>
                     <hr />
                     <img src="~/images/location_icon.jpg" height="20" width="20" />
                     <b>Location:</b>
-                    <p>city.......123</p>
+                    <p>@Model.Trainee.Location</p>
                     <hr />
                     <img src="~/images/link_icon.png" height="20" width="20" />
                     <b>I linked with:</b>
+                    <p>@*<label asp-for="Trainee."></label>*@</p>
                     <br />
 
                     <a href="trainee_profile_link_click"><img src="~/img/fitnesstrainer.png" width="60" height="50" /></a>丨
@@ -241,7 +242,7 @@
                         <button class="fbtn" style="margin-left:300px">Find trainer</button>
                     </a>
                     <hr />
-                 </td>
+                </td>
             </tr>
             <tr>
                 <td>
