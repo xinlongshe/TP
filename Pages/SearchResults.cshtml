@@ -7,68 +7,100 @@
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
 <body>
-     <br />    <br />    <br />
+    <br />    <br />    <br />
 
-@*Search bar*@
-<div class="wrapper">
-	<div class="search_box">
-		<div class="search_btn"><i class="fas fa-search"></i></div>
-		<input type="text" class="input_search" placeholder="What kind of trainer are you after?">
-	</div>
-</div>
+    @*Search bar*@
+    <div class="wrapper">
+        <div class="search_box">
+            <div class="search_btn"><i class="fas fa-search"></i></div>
+            <input type="text" class="input_search" placeholder="What kind of trainer are you after?">
+        </div>
+    </div>
 
-<p class="filter_text" ><b>Filter by profession:</b>   
-</p>
-  <table class="center">
-      <tr>
-          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="Health&Fitness" width="64px" height="auto" id="health" onclick="filter_click('health');"/> <br/>Health</td> 
-          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Arts & Entertainment Icon.svg" alt="Arts&Ent" width="64px" height="auto" id="arts" onclick="filter_click('arts');"/> <br />Arts</td> 
-          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Education & Languages Icon.svg" alt="Edu&Lang" width="64px" height="auto" id="education" onclick="filter_click('education');"/> <br/>Education</td> 
-          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Health & Beauty Icon.svg" alt="Heal&Bea" width="64px" height="auto" id="beauty" onclick="filter_click('beauty');"/> <br/>Beauty</td>
-          <td class="filter_button"> <img src="~/img/TrainerPro - Website_Business & Technology Icon.svg" alt="Bus&Tech" width="64px" height="auto" id="tech" onclick="filter_click('tech');"/> <br/>Technology </td> 
-      </tr>
-  </table>
+    <p class="filter_text">
+        <b>Filter by profession:</b>
+    </p>
+    <table class="center">
+        <tr>
+            <td class="filter_button"> <img src="~/img/TrainerPro - Website_Health & Fitness Icon.svg" alt="Health&Fitness" width="64px" height="auto" id="health" onclick="filter_click('health');" /> <br />Health</td>
+            <td class="filter_button"> <img src="~/img/TrainerPro - Website_Arts & Entertainment Icon.svg" alt="Arts&Ent" width="64px" height="auto" id="arts" onclick="filter_click('arts');" /> <br />Arts</td>
+            <td class="filter_button"> <img src="~/img/TrainerPro - Website_Education & Languages Icon.svg" alt="Edu&Lang" width="64px" height="auto" id="education" onclick="filter_click('education');" /> <br />Education</td>
+            <td class="filter_button"> <img src="~/img/TrainerPro - Website_Health & Beauty Icon.svg" alt="Heal&Bea" width="64px" height="auto" id="beauty" onclick="filter_click('beauty');" /> <br />Beauty</td>
+            <td class="filter_button"> <img src="~/img/TrainerPro - Website_Business & Technology Icon.svg" alt="Bus&Tech" width="64px" height="auto" id="tech" onclick="filter_click('tech');" /> <br />Technology </td>
+        </tr>
+    </table>
 
-<hr class="solid" />
+    <hr class="solid" />
 
-<p class="results" >Showing results for: <b>sample</b> located in <b>sample, postcode, state</b>  
-</p>
-  @*Filter Dropdown*@
-  <div class="dropdown">
-      <button class="dropbtn">Filter by distance</button>
-      <div class="dropdown-content">
-      <a href="#">5km</a>
-      <a href="#">10km</a>
-      <a href="#">15km</a>
-      <a href="#">20km</a>
-      <a href="#">25km</a>
-      </div>
-  </div>
+    <p class="results">
+        Showing results for: <b>sample</b> located in <b>sample, postcode, state</b>
+    </p>
+    @*Filter Dropdown*@
+    <div class="dropdown">
+        <button class="dropbtn">Filter by distance</button>
+        <div class="dropdown-content">
+            <a href="#">5km</a>
+            <a href="#">10km</a>
+            <a href="#">15km</a>
+            <a href="#">20km</a>
+            <a href="#">25km</a>
+        </div>
+    </div>
 
-@*Search results*@
-  <table >
-      <tr>
-      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
-          <br /> <p class="user_description">John Doe</p> <p>Fitness Trainer</p> </td>
-      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
-          <br /> <p class="user_description">William Smith</p> <p>Business Trainer, 2+</p> </td>
-      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
-          <br /> <p class="user_description">Mary Smith</p> <p>Language Trainer</p> </td>
-  </tr>
-  </table>
+    <div class="dropdown">
+        <button class="dropbtn">Filter by Gender</button>
+        <div class="dropdown-content">
+            <a href="#">female</a>
+            <a href="#">male</a>
+            <a href="#">both</a>
+        </div>
+    </div>
 
-    <table >
-      <tr>
-      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
-          <br /> <p class="user_description">John Doe</p> <p>Fitness Trainer</p> </td>
-      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
-          <br /> <p class="user_description">William Smith</p> <p>Business Trainer, 2+</p> </td>
-      <td> <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image"/> </a>
-          <br /> <p class="user_description">Mary Smith</p> <p>Language Trainer</p> </td>
-  </tr>
-  </table>
+    <div class="dropdown">
+        <button class="dropbtn">Filter by Teaching Type</button>
+        <div class="dropdown-content">
+            <a href="#">In person</a>
+            <a href="#">Online</a>
+            <a href="#">both</a>
+        </div>
+    </div>
 
-  </body>
+    @*Search results*@
+    <table>
+        <tr>
+            <td>
+                <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image" /> </a>
+                <br /> <p class="user_description">John Doe</p> <p>Fitness Trainer</p>
+            </td>
+            <td>
+                <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image" /> </a>
+                <br /> <p class="user_description">William Smith</p> <p>Business Trainer, 2+</p>
+            </td>
+            <td>
+                <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image" /> </a>
+                <br /> <p class="user_description">Mary Smith</p> <p>Language Trainer</p>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image" /> </a>
+                <br /> <p class="user_description">John Doe</p> <p>Fitness Trainer</p>
+            </td>
+            <td>
+                <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image" /> </a>
+                <br /> <p class="user_description">William Smith</p> <p>Business Trainer, 2+</p>
+            </td>
+            <td>
+                <a href="/trainer_profile"> <img src="~/img/TrainerPro - Website_Image User Placeholder.jpg" alt="user" class="user_image" /> </a>
+                <br /> <p class="user_description">Mary Smith</p> <p>Language Trainer</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
 
   <style>
 
